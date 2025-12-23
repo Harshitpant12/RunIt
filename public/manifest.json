@@ -1,0 +1,28 @@
+{
+  "short_name": "RunIt",
+  "name": "RunIt | An Online Coding IDE",
+  "description": "RunIt is an online coding IDE for writing, running, and sharing code snippets and playgrounds.",
+  "lang": "en-US",
+  "start_url": ".",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "icons": [
+    {
+      "src": "%PUBLIC_URL%/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "%PUBLIC_URL%/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
