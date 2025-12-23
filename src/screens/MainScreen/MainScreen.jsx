@@ -39,6 +39,95 @@ const MainScreen = () => {
         </div>
       </section>
 
+      {/* Product Preview */}
+      <section className="preview">
+        <h2>See Runit in Action</h2>
+        <p>Write and execute real code in seconds.</p>
+
+        <div className="preview-window">
+          <div className="preview-header">
+            <span className="dot red"></span>
+            <span className="dot yellow"></span>
+            <span className="dot green"></span>
+          </div>
+
+          <pre className="code-snippet">
+      {`# Python example
+      def greet(name):
+          return f"Hello, {name} 🚀"
+
+      print(greet("Runit"))`}
+          </pre>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="how-it-works">
+        <h2>How Runit Works</h2>
+
+        <div className="steps">
+          <div className="step">
+            <span>01</span>
+            <h3>Write Code</h3>
+            <p>Choose Python, C++, JavaScript, or Java.</p>
+          </div>
+
+          <div className="step">
+            <span>02</span>
+            <h3>Run Instantly</h3>
+            <p>Your code executes securely in the cloud.</p>
+          </div>
+
+          <div className="step">
+            <span>03</span>
+            <h3>Get Output</h3>
+            <p>See results and errors immediately.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Langauges */}
+      <section className="languages">
+        <h2>Languages Supported</h2>
+
+        <div className="lang-list">
+          <span>🐍 Python</span>
+          <span>⚡ JavaScript</span>
+          <span>☕ Java</span>
+          <span>🧠 C++</span>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="use-cases">
+        <div className="use-content">
+          <div className="use-text">
+            <h2>Who Uses Runit?</h2>
+            <p>
+              Runit is designed for anyone who wants to write and run code instantly —
+              whether you are learning, testing, or preparing for interviews.
+            </p>
+          </div>
+
+          <div className="use-grid">
+            <div className="use-card">
+              <h3>🎓 Students</h3>
+              <p>Practice programming concepts without setup hassles.</p>
+            </div>
+
+            <div className="use-card">
+              <h3>💻 Developers</h3>
+              <p>Quickly test logic, debug snippets, and experiment.</p>
+            </div>
+
+            <div className="use-card">
+              <h3>🧪 Interview Prep</h3>
+              <p>Simulate real coding environments for interviews.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="features" id="features">
         <h2>Why Runit?</h2>
