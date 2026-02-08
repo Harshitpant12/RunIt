@@ -180,8 +180,8 @@ const MainScreen = () => {
             <p>Write and execute code in multiple programming languages.</p>
           </div>
           <div className="feature-card">
-            <h3>🔒 Secure & Isolated</h3>
-            <p>Each execution runs in a secure, isolated environment.</p>
+            <h3>🔒 Controlled Execution</h3>
+            <p>Code runs in a controlled environment with clear execution boundaries.</p>
           </div>
         </div>
       </section>
