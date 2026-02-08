@@ -90,7 +90,7 @@ public/
 1. **Clone the repo:**
 
    ```bash
-   git clone https://github.com/yourusername/runit.git
+   git clone https://github.com/Harshitpant12/RunIt.git
    cd runit
    ```
 
