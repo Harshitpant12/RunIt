@@ -1,16 +1,14 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Error404 = () => {
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      navigate('/');
-    }, 3000)
-  }, [])
-  return (
-    <div>Error 404, No Page Found, Redirecting to home page</div>
-  )
-}
+      navigate("/");
+    }, 3000);
+  }, [navigate]);
+  return <div>Error 404, No Page Found, Redirecting to home page</div>;
+};
 
-export default Error404
+export default Error404;

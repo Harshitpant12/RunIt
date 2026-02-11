@@ -1,9 +1,8 @@
-import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
-import { BiImport, BiExport } from 'react-icons/bi';
-import CodeEditor from './CodeEditor';
-import { ModalContext } from '../../context/ModalContext';
-import { languageMap } from '../../context/PlaygroundContext';
+import React, { useContext, useState } from "react";
+import styled from "styled-components";
+import { BiImport, BiExport } from "react-icons/bi";
+import CodeEditor from "./CodeEditor";
+import { languageMap } from "../../context/PlaygroundContext";
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +11,7 @@ const Container = styled.div`
   border-radius: 14px;
   padding: 1rem;
   gap: 1rem;
-  height: ${({ isFullScreen }) => (isFullScreen ? '100vh' : 'auto')};
+  height: ${({ isFullScreen }) => (isFullScreen ? "100vh" : "auto")};
 `;
 
 const Header = styled.div`
@@ -129,10 +128,11 @@ const Option = styled.option`
 const EditorWrapper = styled.div`
   flex-grow: 1;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: ${({ isFullScreen }) => (isFullScreen ? 'calc(100vh - 180px)' : '400px')};
+  max-height: ${({ isFullScreen }) =>
+    isFullScreen ? "calc(100vh - 180px)" : "400px"};
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -182,44 +182,44 @@ const EditorContainer = ({
   runCode,
   getFile,
   isFullScreen,
-  setIsFullScreen
+  setIsFullScreen,
 }) => {
-  const { openModal } = useContext(ModalContext);
-
   const themeOptions = [
-    { value: 'githubDark', label: 'githubDark' },
-    { value: 'githubLight', label: 'githubLight' },
-    { value: 'bespin', label: 'bespin' },
-    { value: 'duotoneDark', label: 'duotoneDark' },
-    { value: 'duotoneLight', label: 'duotoneLight' },
-    { value: 'dracula', label: 'dracula' },
-    { value: 'xcodeDark', label: 'xcodeDark' },
-    { value: 'xcodeLight', label: 'xcodeLight' },
-    { value: 'vscodeDark', label: 'vscodeDark' },
-    { value: 'vscodeLight', label: 'vscodeLight' },
-    { value: 'okaidia', label: 'okaidia' },
+    { value: "githubDark", label: "githubDark" },
+    { value: "githubLight", label: "githubLight" },
+    { value: "bespin", label: "bespin" },
+    { value: "duotoneDark", label: "duotoneDark" },
+    { value: "duotoneLight", label: "duotoneLight" },
+    { value: "dracula", label: "dracula" },
+    { value: "xcodeDark", label: "xcodeDark" },
+    { value: "xcodeLight", label: "xcodeLight" },
+    { value: "vscodeDark", label: "vscodeDark" },
+    { value: "vscodeLight", label: "vscodeLight" },
+    { value: "okaidia", label: "okaidia" },
   ];
 
   const languageOptions = [
-    { value: 'cpp', label: 'cpp' },
-    { value: 'javascript', label: 'javascript' },
-    { value: 'java', label: 'java' },
-    { value: 'python', label: 'python' },
+    { value: "cpp", label: "cpp" },
+    { value: "javascript", label: "javascript" },
+    { value: "java", label: "java" },
+    { value: "python", label: "python" },
   ];
 
   const [currentTheme, setCurrentTheme] = useState(themeOptions[0]);
   const [language, setLanguage] = useState(() => {
-    const found = languageOptions.find(opt => opt.value === currentLanguage);
+    const found = languageOptions.find((opt) => opt.value === currentLanguage);
     return found || languageOptions[0];
   });
 
   const handleThemeChange = (e) => {
-    const selected = themeOptions.find(opt => opt.value === e.target.value);
+    const selected = themeOptions.find((opt) => opt.value === e.target.value);
     setCurrentTheme(selected);
   };
 
   const handleLanguageChange = (e) => {
-    const selected = languageOptions.find(opt => opt.value === e.target.value);
+    const selected = languageOptions.find(
+      (opt) => opt.value === e.target.value,
+    );
     setLanguage(selected);
     setCurrentLanguage(selected.value);
     setCurrentCode(languageMap[selected.value].defaultCode);
@@ -240,21 +240,29 @@ const EditorContainer = ({
           <Title>{title}</Title>
           <Button onClick={saveCode}>Save</Button>
           <Button onClick={() => setIsFullScreen(!isFullScreen)}>
-            {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'}
+            {isFullScreen ? "Exit Fullscreen" : "Fullscreen"}
           </Button>
         </HeaderLeft>
 
         <HeaderRight>
           <SelectWrapper>
             <Select value={language.value} onChange={handleLanguageChange}>
-              {languageOptions.map(opt => <Option key={opt.value} value={opt.value}>{opt.label}</Option>)}
+              {languageOptions.map((opt) => (
+                <Option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </Option>
+              ))}
             </Select>
             <SelectArrow>▼</SelectArrow>
           </SelectWrapper>
 
           <SelectWrapper>
             <Select value={currentTheme.value} onChange={handleThemeChange}>
-              {themeOptions.map(opt => <Option key={opt.value} value={opt.value}>{opt.label}</Option>)}
+              {themeOptions.map((opt) => (
+                <Option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </Option>
+              ))}
             </Select>
             <SelectArrow>▼</SelectArrow>
           </SelectWrapper>

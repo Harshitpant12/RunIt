@@ -34,31 +34,6 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const FieldsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  input {
-    height: 2rem;
-    padding: 0.4rem 0.6rem;
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
-    background: #fff;
-    color: #111827;
-    font-size: 0.95rem;
-
-    &::placeholder {
-      color: #6b7280;
-    }
-
-    &:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 1px #3b82f6;
-    }
-  }
-`;
 
 const ButtonWrapper = styled.div`
   display: flex;

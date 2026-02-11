@@ -20,11 +20,6 @@ import { okaidia } from '@uiw/codemirror-theme-okaidia'
 import { indentUnit } from '@codemirror/language'
 import { EditorState } from '@codemirror/state'
 
-const CodeEditor = ({ currentLanguage, currentTheme, currentCode, setCurrentCode }) => {
-
-  const [theme, setTheme] = useState(dracula)
-  const [language, setLanguage] = useState(javascript)
-
   // Map string to theme object
   const themeMap = {
     githubDark,
@@ -47,6 +42,13 @@ const CodeEditor = ({ currentLanguage, currentTheme, currentCode, setCurrentCode
     javascript,
     python
   }
+
+const CodeEditor = ({ currentLanguage, currentTheme, currentCode, setCurrentCode }) => {
+
+  const [theme, setTheme] = useState(dracula)
+  const [language, setLanguage] = useState(javascript)
+
+
 
   useEffect(() => {
     if (languageMap[currentLanguage]) setLanguage(languageMap[currentLanguage])
