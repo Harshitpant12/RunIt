@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-![RunIt](https://run-it-sigma.vercel.app/)
+[**RunIt**](https://run-it-sigma.vercel.app/)
 
 ---
 
