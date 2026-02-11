@@ -6,33 +6,38 @@
 
 ---
 
-## 🖼️ Demo
+## Demo
 
 ![RunIt Demo](./public/resources/demo.gif)
 
 ---
 
-## 💡 Motivation
+## Live Demo
+
+![RunIt](https://run-it-sigma.vercel.app/)
+
+---
+
+## Motivation
 
 RunIt was built to explore building a full-featured in-browser code editor with React while solving real problems like editor state management, multi-file workflows, and theme customization. The focus was on reducing setup friction and making quick coding and experimentation effortless.
 
+---
+
+## Features
+
+- **Browser-Based IDE**: No installs, no configuration. Just open and code.
+- **Multi-Language Support**: Python, JavaScript, Java, and C++.
+- **Customizable Themes**: Choose from popular editor themes.
+- **Controlled Execution Environment**: Each run executes in a sandboxed environment with resource limits.
+- **Project & Playground Management**: Organize code in folders and playgrounds.
+- **Import/Export**: Easily import or export code and input/output files.
+- **Instant Output**: See results and errors immediately.
+- **Perfect for Students, Developers, and Interview Prep**.
 
 ---
 
-## 🚀 Features
-
-- 🌐 **Browser-Based IDE**: No installs, no configuration. Just open and code.
-- 🧠 **Multi-Language Support**: Python, JavaScript, Java, and C++.
-- 🎨 **Customizable Themes**: Choose from popular editor themes.
-- 🔒 **Controlled Execution Environment**: Each run executes in a sandboxed environment with resource limits.
-- 📁 **Project & Playground Management**: Organize code in folders and playgrounds.
-- 💾 **Import/Export**: Easily import or export code and input/output files.
-- ⚡ **Instant Output**: See results and errors immediately.
-- 👩‍💻 **Perfect for Students, Developers, and Interview Prep**.
-
----
-
-## 🏗️ Folder Structure
+## Folder Structure
 
 ```
 src/
@@ -70,11 +75,13 @@ src/
 public/
 	index.html
 	manifest.json
+api/
+	judge.js
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React** (with hooks & context)
 - **Styled-components** for styling
@@ -85,7 +92,7 @@ public/
 
 ---
 
-## ✨ Getting Started
+## Getting Started
 
 1. **Clone the repo:**
 
@@ -110,7 +117,7 @@ public/
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - ![Folder Page](./public/resources/folder_playground.png)
 - ![Code Execution Page](./public/resources/code_execution_page.png)
@@ -118,15 +125,14 @@ public/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal project, but suggestions, issues, and improvements are always welcome.  
 Feel free to open an issue or submit a pull request.
 
-
 ---
 
-## 👤 Author
+## Author
 
 **Harshit Pant**
 
